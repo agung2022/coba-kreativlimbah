@@ -1,0 +1,6 @@
+{
+  "name": "KreativLimbah AI Engine",
+  "description": "Platform AI untuk mengubah limbah non-organik menjadi produk upcycled bernilai tinggi dengan instruksi DIY yang kreatif dan aman.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["AI-powered DIY guidance", "Sustainable Product Design"]
+}

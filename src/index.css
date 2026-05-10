@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-natural-bg: #F7F6F2;
+  --color-natural-white: #FFFFFF;
+  --color-natural-border: #E5E2D9;
+  --color-natural-text: #2D2D2D;
+  --color-natural-heading: #1A1A1A;
+  --color-natural-accent: #5A5A40;
+  --color-natural-accent-hover: #4A4A35;
+  --color-natural-muted: #8A8A70;
+  --color-natural-input: #FBFBFA;
+  --color-natural-tag: #EEECE5;
+  --color-natural-description: #7A7A60;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Libre Baskerville", serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+  @apply bg-natural-bg text-natural-text font-sans antialiased;
+}
+
+.markdown-body {
+  @apply max-w-none;
+}
+
+.markdown-body h1 {
+  @apply text-3xl font-serif font-bold text-natural-accent mb-4;
+}
+
+.markdown-body h2 {
+  @apply text-xl font-bold uppercase tracking-widest text-natural-muted mt-8 mb-4 flex items-center gap-2;
+}
+
+.markdown-body h2::before {
+  content: "";
+  @apply w-4 h-[1px] bg-natural-muted;
+}
+
+.markdown-body h3 {
+  @apply text-lg font-bold text-natural-accent mt-6 mb-2;
+}
+
+.markdown-body p {
+  @apply mb-4 leading-relaxed text-sm text-[#4A4A40];
+}
+
+.markdown-body ul {
+  @apply mb-4 space-y-2;
+}
+
+.markdown-body li {
+  @apply flex justify-between text-sm py-2 border-b border-natural-border;
+}
+
+.markdown-body li strong {
+  @apply text-natural-text font-bold;
+}
+
+.markdown-body ol {
+  @apply mb-4 space-y-6;
+}
+
+.markdown-body ol li {
+  @apply flex gap-4 border-none py-0;
+}
+
+.markdown-body ol li::before {
+  content: counter(list-item, decimal-leading-zero) ".";
+  @apply font-serif italic text-2xl text-natural-accent opacity-50 shrink-0;
+}
+
+.markdown-body blockquote {
+  @apply bg-natural-accent text-white rounded-[32px] p-8 my-6 not-italic;
+}
+
+.markdown-body blockquote p {
+  @apply text-white/90 text-sm italic font-serif leading-relaxed mb-0;
+}
+
+.markdown-body blockquote h3 {
+  @apply text-[10px] font-bold uppercase tracking-[0.2em] opacity-60 mb-2 mt-0 text-white;
+}
+
+.markdown-body strong {
+  @apply font-bold text-natural-accent;
+}
+
+.markdown-body code {
+  @apply bg-natural-accent/10 px-1 py-0.5 rounded text-sm text-natural-accent;
+}
